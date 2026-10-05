@@ -1,0 +1,257 @@
+const rooms = [
+    {
+        number: 101,
+        type: "Standard",
+        price: 2000,
+        available: true
+    },
+    {
+        number: 102,
+        type: "Deluxe",
+        price: 3000,
+        available: false
+    },
+    {
+        number: 103,
+        type: "Suite",
+        price: 5000,
+        available: true
+    }
+];
+
+Get available rooms:
+
+const availableRooms = rooms.filter(
+    room => room.available
+);
+
+Get their numbers:
+
+const roomNumbers = availableRooms.map(
+    room => room.number
+);
+
+Get their total price:
+
+const total = availableRooms.reduce(
+    (sum, room) => sum + room.price,
+    0
+);
+
+So we're combining:
+
+Array
+ ↓
+filter
+ ↓
+map
+ ↓
+reduce
+
+
+StaySphere/
+│
+├── frontend/                       ← React application
+│   │
+│   ├── public/
+│   │   ├── images/
+│   │   ├── icons/
+│   │   └── fonts/
+│   │
+│   ├── src/
+│   │   │
+│   │   ├── assets/
+│   │   │   ├── images/
+│   │   │   ├── icons/
+│   │   │   └── logos/
+│   │   │
+│   │   ├── components/
+│   │   │   ├── common/
+│   │   │   ├── navbar/
+│   │   │   ├── footer/
+│   │   │   ├── hotel/
+│   │   │   ├── room/
+│   │   │   ├── booking/
+│   │   │   ├── payment/
+│   │   │   ├── groupBooking/
+│   │   │   ├── reviews/
+│   │   │   └── notifications/
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── public/
+│   │   │   ├── customer/
+│   │   │   ├── hotel/
+│   │   │   ├── staff/
+│   │   │   └── admin/
+│   │   │
+│   │   ├── layouts/
+│   │   │   ├── PublicLayout.jsx
+│   │   │   ├── CustomerLayout.jsx
+│   │   │   ├── HotelLayout.jsx
+│   │   │   ├── StaffLayout.jsx
+│   │   │   └── AdminLayout.jsx
+│   │   │
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   ├── authService.js
+│   │   │   ├── hotelService.js
+│   │   │   ├── bookingService.js
+│   │   │   ├── paymentService.js
+│   │   │   └── groupBookingService.js
+│   │   │
+│   │   ├── context/
+│   │   │   ├── AuthContext.jsx
+│   │   │   ├── BookingContext.jsx
+│   │   │   └── NotificationContext.jsx
+│   │   │
+│   │   ├── hooks/
+│   │   │   ├── useAuth.js
+│   │   │   ├── useFetch.js
+│   │   │   └── useBooking.js
+│   │   │
+│   │   ├── utils/
+│   │   │   ├── formatCurrency.js
+│   │   │   ├── dateUtils.js
+│   │   │   └── validation.js
+│   │   │
+│   │   ├── routes/
+│   │   │   └── AppRoutes.jsx
+│   │   │
+│   │   ├── styles/
+│   │   │   ├── global.css
+│   │   │   └── variables.css
+│   │   │
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   │
+│   ├── .env
+│   ├── package.json
+│   └── vite.config.js
+│
+│
+├── backend/                        ← Node.js + Express
+│   │
+│   ├── src/
+│   │   │
+│   │   ├── config/
+│   │   │   ├── db.js
+│   │   │   └── env.js
+│   │   │
+│   │   ├── controllers/
+│   │   │   ├── authController.js
+│   │   │   ├── hotelController.js
+│   │   │   ├── roomController.js
+│   │   │   ├── bookingController.js
+│   │   │   ├── paymentController.js
+│   │   │   ├── groupBookingController.js
+│   │   │   ├── reviewController.js
+│   │   │   └── analyticsController.js
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── authRoutes.js
+│   │   │   ├── hotelRoutes.js
+│   │   │   ├── roomRoutes.js
+│   │   │   ├── bookingRoutes.js
+│   │   │   ├── paymentRoutes.js
+│   │   │   ├── groupBookingRoutes.js
+│   │   │   ├── reviewRoutes.js
+│   │   │   └── analyticsRoutes.js
+│   │   │
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   ├── Hotel.js
+│   │   │   ├── Room.js
+│   │   │   ├── Booking.js
+│   │   │   └── Payment.js
+│   │   │
+│   │   ├── middleware/
+│   │   │   ├── authMiddleware.js
+│   │   │   ├── roleMiddleware.js
+│   │   │   ├── errorMiddleware.js
+│   │   │   └── validationMiddleware.js
+│   │   │
+│   │   ├── services/
+│   │   │   ├── bookingService.js
+│   │   │   ├── paymentService.js
+│   │   │   ├── notificationService.js
+│   │   │   └── recommendationService.js
+│   │   │
+│   │   ├── utils/
+│   │   │   ├── generateToken.js
+│   │   │   ├── generateInvoice.js
+│   │   │   └── generateQRCode.js
+│   │   │
+│   │   ├── app.js
+│   │   └── server.js
+│   │
+│   ├── .env
+│   └── package.json
+│
+│
+├── database/                       ← MySQL
+│   │
+│   ├── schema/
+│   │   ├── 01_users.sql
+│   │   ├── 02_hotels.sql
+│   │   ├── 03_rooms.sql
+│   │   ├── 04_bookings.sql
+│   │   ├── 05_group_bookings.sql
+│   │   ├── 06_payments.sql
+│   │   ├── 07_reviews.sql
+│   │   ├── 08_services.sql
+│   │   └── 09_analytics.sql
+│   │
+│   ├── seed/
+│   │   └── demo_data.sql
+│   │
+│   └── migrations/
+│
+│
+├── ml-service/                     ← Python + FastAPI
+│   │
+│   ├── data/
+│   │   ├── raw/
+│   │   └── processed/
+│   │
+│   ├── models/
+│   │   ├── recommendation/
+│   │   ├── demand_prediction/
+│   │   ├── pricing/
+│   │   └── sentiment/
+│   │
+│   ├── services/
+│   │   ├── recommendation.py
+│   │   ├── demand_prediction.py
+│   │   ├── dynamic_pricing.py
+│   │   └── sentiment_analysis.py
+│   │
+│   ├── preprocessing/
+│   │   └── prepare_data.py
+│   │
+│   ├── analytics/
+│   │   ├── revenue_analysis.py
+│   │   ├── occupancy_analysis.py
+│   │   └── customer_analysis.py
+│   │
+│   ├── main.py
+│   └── requirements.txt
+│
+│
+├── docs/                           ← BTech documentation
+│   │
+│   ├── ER-Diagram/
+│   ├── Flowcharts/
+│   ├── Architecture/
+│   ├── API/
+│   ├── Screenshots/
+│   └── Project-Report/
+│
+│
+├── tests/
+│   ├── frontend/
+│   ├── backend/
+│   └── api/
+│
+├── .gitignore
+├── README.md
+└── LICENSE
