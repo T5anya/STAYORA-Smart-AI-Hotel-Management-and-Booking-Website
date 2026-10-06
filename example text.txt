@@ -255,3 +255,15 @@ StaySphere/
 ├── .gitignore
 ├── README.md
 └── LICENSE
+
+
+const stays = [
+  {id:1,name:'The Wildwood House',place:'Coorg, Karnataka',type:'Nature lodge',price:8450,rating:4.96,reviews:128,tag:'Guest favorite',image:'photo-1449158743715-0a90ebb6d2d8',amenities:['Mountain view','Breakfast','Pool'],tone:'forest'},
+  {id:2,name:'Casa Maré',place:'Alibaug, Maharashtra',type:'Beach villa',price:11200,rating:4.91,reviews:96,tag:'Rare find',image:'photo-1600607687939-ce8a6c25118c',amenities:['Beach access','Private pool','Wi-Fi'],tone:'sand'},
+  {id:3,name:'Moss & Moon',place:'Wayanad, Kerala',type:'Treehouse',price:6900,rating:4.88,reviews:74,tag:'Design pick',image:'photo-1449158743715-0a90ebb6d2d8',amenities:['Forest view','Fireplace','Breakfast'],tone:'moss'},
+  {id:4,name:'The Courtyard Edit',place:'Jaipur, Rajasthan',type:'Heritage stay',price:7800,rating:4.93,reviews:211,tag:'Superhost',image:'photo-1600210492486-724fe5c67fb0',amenities:['Heritage home','Rooftop','Wi-Fi'],tone:'clay'},
+  {id:5,name:'Stillwater Retreat',place:'Udaipur, Rajasthan',type:'Boutique hotel',price:13500,rating:4.89,reviews:153,tag:'Guest favorite',image:'photo-1613490493576-7c1c293dbd9d',amenities:['Lake view','Spa','Breakfast'],tone:'lake'},
+  {id:6,name:'Pine & Prairie',place:'Manali, Himachal',type:'Mountain cabin',price:5900,rating:4.95,reviews:89,tag:'Rare find',image:'photo-1510798831971-661eb04b3739',amenities:['Mountain view','Fireplace','Pet friendly'],tone:'pine'}
+];
+const categories=['All stays','Cabins','Beachfront','Design','Countryside','Heritage','Treehouses','Mountains'];
+

@@ -15,10 +15,10 @@
 /* =================================
    NAVBAR
 ================================= */
-
 .navbar {
   position: sticky;
-  top: 0;
+  top: 0px;
+  padding-top: 5px;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -49,12 +49,12 @@
 ================================= */
 
 .navbar-container {
-  width: min(1200px, 92%);
+  
   height: 82px;
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 /* =================================

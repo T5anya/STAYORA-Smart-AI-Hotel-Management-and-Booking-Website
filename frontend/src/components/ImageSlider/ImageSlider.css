@@ -1,0 +1,504 @@
+/* ========================================
+   MAIN SLIDER
+======================================== */
+
+.image-slider {
+  position: relative;
+  width: 92%;
+  max-width: 1400px;
+  height: 550px;
+  margin: 70px auto;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #f5eee2;
+  box-shadow:
+    0 18px 45px rgba(63, 43, 27, 0.16);
+  isolation: isolate;
+}
+
+/* ========================================
+   BACKGROUND DECORATION
+======================================== */
+
+.slider-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.circle-one {
+    width: 430px;
+    height: 430px;
+    right: -170px;
+    top: -230px;
+    background: rgba(64, 91, 58, 0.09);
+}
+
+.circle-two {
+    width: 300px;
+    height: 300px;
+    left: -150px;
+    bottom: -200px;
+    background: rgba(64, 91, 58, 0.09);
+}
+
+/* ========================================
+   SLIDES CONTAINER
+======================================== */
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform 0.55s
+    cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+
+/* ========================================
+   SINGLE SLIDE
+======================================== */
+
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 28px;
+  padding: 26px;
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   LEFT CONTENT
+======================================== */
+
+.slide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 20px 55px 45px;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   TOP SECTION
+======================================== */
+
+.slide-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.hotel-badge {
+  padding: 7px 14px;
+  border-radius: 30px;
+  background: #486440;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hotel-type {
+  color: #886648;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ========================================
+   TITLE
+======================================== */
+
+.slide-content h2 {
+  margin: 0 0 12px;
+  color: #3c2a1d;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+/* ========================================
+   LOCATION
+======================================== */
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 13px;
+  color: #756557;
+  font-size: 15px;
+}
+
+/* ========================================
+   RATING
+======================================== */
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+.star {
+  color: #bd8539;
+  font-size: 18px;
+}
+
+.rating strong {
+  color: #3c2a1d;
+  font-size: 15px;
+}
+
+.reviews {
+  color: #88786b;
+  font-size: 13px;
+}
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+.description {
+  max-width: 580px;
+  margin: 0 0 22px;
+  color: #6c5c50;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   HOTEL DETAILS
+======================================== */
+
+.hotel-details {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.detail {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.detail span {
+  color: #88776a;
+  font-size: 12px;
+}
+
+.detail strong {
+  color: #3c2a1d;
+  font-size: 21px;
+}
+
+.detail small {
+  color: #88776a;
+  font-size: 11px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 35px;
+  background: #d4c5b4;
+}
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.view-hotel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  width: fit-content;
+  padding:13px 22px;
+  border: none;
+  border-radius: 9px;
+  background: #3f5d3b;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.view-hotel span {
+  font-size: 18px;
+}
+
+.view-hotel:hover {
+  background: #2e472b;
+  transform: translateY(-5px);
+}
+
+/* ========================================
+   IMAGE
+======================================== */
+.image-container {
+  position: relative;
+  flex: 1.05;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 21px;
+  background: #d8d0c5;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*
+    No transform animation here.
+    This helps keep the slider smooth.
+  */
+}
+
+/* ========================================
+   IMAGE OVERLAY
+======================================== */
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(35, 27, 20, 0.58),
+      transparent 45%
+    );
+  pointer-events: none;
+}
+
+/* ========================================
+   IMAGE LABEL
+======================================== */
+
+.image-label {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background:
+    rgba(45, 42, 36, 0.72);
+  color: white;
+  font-size: 12px;
+  backdrop-filter: blur(5px);
+}
+/* ========================================
+   CONTROLS
+======================================== */
+
+.slider-controls {
+  position: absolute;
+  left: 45px;
+  bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 10;
+}
+.arrow {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #d0c1b0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.8);
+  color: #453426;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.arrow:hover {
+  background: #486440;
+  color: white;
+  transform: scale(1.06);
+}
+
+/* ========================================
+   DOTS
+======================================== */
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: #c7b9a8;
+  cursor: pointer;
+  transition:
+    width 0.25s ease,
+    background 0.25s ease;
+}
+
+.dot.active {
+  width: 25px;
+  background: #486440;
+}
+
+/* ========================================
+   COUNTER
+======================================== */
+
+.counter {
+  position: absolute;
+  right: 45px;
+  bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6d5d4f;
+  font-size: 11px;
+  letter-spacing: 1px;
+  z-index: 10;
+}
+
+.counter-line {
+  width: 25px;
+  height: 1px;
+  background: #b9aa99;
+}
+
+/* ========================================
+   EMPTY SLIDER
+======================================== */
+
+.empty-slider {
+  width: 90%;
+  margin: 50px auto;
+  padding: 50px;
+  text-align: center;
+  color: #3c2a1d;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+  .image-slider {
+    width: 94%;
+    height: 520px;
+  }
+
+  .slide {
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .slide-content {
+    padding: 25px;
+  }
+
+  .slide-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+  .image-slider {
+    width: 94%;
+    height: 650px;
+    margin: 50px auto;
+    border-radius: 20px;
+  }
+
+  .slide {
+    flex-direction: column;
+    height: 650px;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .image-container {
+    order: 1;
+    flex: none;
+    width: 100%;
+    height: 270px;
+  }
+
+  .slide-content {
+    order: 2;
+    padding: 5px 15px 50px;
+  }
+
+  .slide-content h2 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .hotel-details {
+    gap: 18px;
+  }
+
+  .slider-controls {
+    left: 20px;
+    bottom: 15px;
+  }
+
+  .counter {
+    right: 20px;
+    bottom: 23px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .slides {
+    transition: none;
+  }
+
+  .arrow,
+  .dot,
+  .view-hotel {
+    transition: none;
+  }
+
+}
