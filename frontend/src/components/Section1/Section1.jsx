@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
 import "./Section1.css";
 function Section1() {
-    const searchHotels = () => {
-
-    };
+  const searchHotels = () => {}
   return (
-    <div className="section1">
+    <div className="section1" id="home">
       <div className="hero-content">
         <div className="hero-tag">✦ Find your perfect stay</div>
 
@@ -45,7 +43,7 @@ function Section1() {
             </select>
           </div>
 
-          <button className="search-button" onClick={searchHotels}>
+          <button className="searc-button" onClick={searchHotels}>
             Search
           </button>
         </div>

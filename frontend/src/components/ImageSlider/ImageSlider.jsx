@@ -111,7 +111,7 @@ function ImageSlider({
   ];
 
   return (
-    <section className="image-slider">
+    <section className="image-slider" id="hotels">
 
       {/* Decorative circles */}
 

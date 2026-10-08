@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 *{  
   margin:0;
@@ -16,26 +11,13 @@ html {
 
 body {
   font-family: "DM Sans", sans-serif;
-  background: #f8f6ef;
-  color: #3f352d;
+  background: #f5efe4;
+  color: #3b2418;
+  overflow-x: hidden;
 }
-
-:root {
-  --brown: #60483b;
-  --dark-brown: #3e3028;
-  --light-green: #dce8d5;
-  --green: #829b72;
-  --cream: #f8f6ef;
-  --white: #ffffff;
-  --text-light: #756b64;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
 a {
   text-decoration: none;
   color: inherit;
 }
+
+

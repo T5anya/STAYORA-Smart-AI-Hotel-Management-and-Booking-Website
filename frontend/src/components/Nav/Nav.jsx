@@ -44,10 +44,14 @@ function Nav() {
           <a href="#hotels" onClick={() => setMenuOpen(false)}>
             Hotels
           </a>
-
-          <a href="#features" onClick={() => setMenuOpen(false)}>
+          <a href="#Search" onClick={() => setMenuOpen(false)}>
+            Search Hotels
+          </a>
+          <a href="#feature" onClick={() => setMenuOpen(false)}>
             Features
           </a>
+
+         
 
           <a href="#about" onClick={() => setMenuOpen(false)}>
             About Us
