@@ -65,14 +65,14 @@ function Nav() {
         {/* RIGHT SIDE BUTTONS */}
         <div className="nav-actions">
 
-          <a href="/login" className="login-btn">
+          <a href="/login" id="login-btn" className="login-btn">
             Login
           </a>
 
-          <button className="get-started-btn">
-            <span>Get Started</span>
+          <a href="/register" className="get-started-btn">
+            <span>Register</span>
             <span className="arrow">→</span>
-          </button>
+          </a>
 
         </div>
 
