@@ -1,5 +1,6 @@
 import React, { useState,useEffect  } from "react";
 import "./Nav.css";
+import { Link } from "react-router-dom";
 
 function Nav() {
   // Controls mobile menu
@@ -37,42 +38,40 @@ function Nav() {
 
         {/* NAVIGATION LINKS */}
         <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <a href="#home" onClick={() => setMenuOpen(false)}>
+          <Link to="/" onClick={() => setMenuOpen(false)}>
             Home
-          </a>
+          </Link>
 
-          <a href="#hotels" onClick={() => setMenuOpen(false)}>
+          <Link to="/hotels" onClick={() => setMenuOpen(false)}>
             Hotels
-          </a>
-          <a href="#Search" onClick={() => setMenuOpen(false)}>
+          </Link>
+          <Link to="/search" onClick={() => setMenuOpen(false)}>
             Search Hotels
-          </a>
-          <a href="#feature" onClick={() => setMenuOpen(false)}>
+          </Link>
+          <Link to="/features" onClick={() => setMenuOpen(false)}>
             Features
-          </a>
-
+          </Link>
          
-
-          <a href="#about" onClick={() => setMenuOpen(false)}>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>
             About Us
-          </a>
+          </Link>
 
-          <a href="#contact" onClick={() => setMenuOpen(false)}>
+          <Link to="/contact" onClick={() => setMenuOpen(false)}>
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* RIGHT SIDE BUTTONS */}
         <div className="nav-actions">
 
-          <a href="/login" id="login-btn" className="login-btn">
+          <Link to="/login" id="login-btn" className="login-btn">
             Login
-          </a>
+          </Link>
 
-          <a href="/register" className="get-started-btn">
+          <Link to="/register" className="get-started-btn">
             <span>Register</span>
             <span className="arrow">→</span>
-          </a>
+          </Link>
 
         </div>
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import Nav from '../components/Nav/Nav';
 import Section1 from '../components/Section1/Section1';
 import ImageSlider from '../components/ImageSlider/ImageSlider';
 import hotels from '../data/hoteldata';
@@ -13,7 +12,6 @@ import Features from '../components/Features/Features';
 const landing = () => {
   return (
     <div>
-      <Nav/>
       <Section1 />
       <ImageSlider 
         hotels={hotels}
